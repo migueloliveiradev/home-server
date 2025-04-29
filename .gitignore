@@ -1,11 +1,13 @@
 .env
 .env.shared
 
+# Ignorar tudo dentro de library/music, exceto .gitkeep
 library/music/*
-library/music/*/
+!library/music/.gitkeep
 
+# Ignorar tudo dentro de navidrome/data, exceto .gitkeep
 navidrome/data/*
-navidrome/data/*
+!navidrome/data/.gitkeep
 
 nginx-proxy-manager/data/*
 nginx-proxy-manager/data/*
