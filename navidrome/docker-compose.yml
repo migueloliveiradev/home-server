@@ -1,0 +1,16 @@
+services:
+  navidrome:
+    container_name: navidrome
+    image: deluan/navidrome:0.55.2
+    user: "${UID:-1000}:${GID:-1000}"
+    ports:
+      - "4533:4533"
+    restart: always
+    environment:
+      ND_LOGLEVEL: debug
+    env_file:
+      - ".env"
+      - "../.env.shared"
+    volumes:
+      - "./data:/data"
+      - "../library/music/:/music:ro"

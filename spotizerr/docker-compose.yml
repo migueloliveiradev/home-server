@@ -1,0 +1,29 @@
+services:
+  spotizerr:
+    container_name: spotizerr
+    image: cooldockerizer93/spotizerr:1.4.0
+    volumes:
+      - ./creds:/app/creds
+      - ./config:/app/config
+      - ../library/music:/app/downloads
+      - ./logs:/app/logs
+    ports:
+      - 7171:7171
+    env_file: ../.env.shared
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - REDIS_URL=redis://redis:6379/0
+      - REDIS_BACKEND=redis://redis:6379/0
+      - EXPLICIT_FILTER=false
+    depends_on:
+      - redis
+    restart: always
+  redis:
+    image: redis:alpine
+    container_name: spotizerr-redis
+    restart: unless-stopped
+    volumes:
+      - ./redis-data:/data
+    command: redis-server --appendonly yes
