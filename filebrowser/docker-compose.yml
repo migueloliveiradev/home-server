@@ -1,0 +1,13 @@
+services:
+  filebrowser:
+    image: filebrowser/filebrowser:s6
+    container_name: filebrowser
+    ports:
+      - "8934:80"
+    env_file:
+      - ../.env.shared
+    volumes:
+      - /var/www/home-server/library:/srv
+      - ./database:/database/
+      - ./config:/config/
+    restart: unless-stopped
