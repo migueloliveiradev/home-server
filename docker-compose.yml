@@ -4,3 +4,4 @@ include:
   - ./nginx-proxy-manager/docker-compose.yml
   - ./beszel/docker-compose.yml
   - ./filebrowser/docker-compose.yml
+  - ./dozzle/docker-compose.yml
