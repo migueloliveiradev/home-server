@@ -1,10 +1,9 @@
 services:
   spotizerr:
     container_name: spotizerr
-    image: cooldockerizer93/spotizerr:1.4.0
+    image: cooldockerizer93/spotizerr:2.0.0
     volumes:
-      - ./creds:/app/creds
-      - ./config:/app/config
+      - ./data:/app/data
       - ../library/music:/app/downloads
       - ./logs:/app/logs
     ports:

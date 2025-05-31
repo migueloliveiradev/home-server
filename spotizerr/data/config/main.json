@@ -1,0 +1,18 @@
+{
+  "customDirFormat": "%ar_album%/%year% - %album%",
+  "customTrackFormat": "%tracknum%. %music%",
+  "deezer": "Deezer",
+  "deezerQuality": "MP3_320",
+  "explicitFilter": false,
+  "fallback": true,
+  "maxConcurrentDownloads": 2,
+  "maxRetries": 3,
+  "realTime": true,
+  "retryDelaySeconds": 5,
+  "retry_delay_increase": 10,
+  "service": "spotify",
+  "spotify": "Spotify",
+  "spotifyQuality": "HIGH",
+  "tracknum_padding": true,
+  "downloadQueueVisible": false
+}
