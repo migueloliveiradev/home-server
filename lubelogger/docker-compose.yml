@@ -1,0 +1,15 @@
+services:
+  lubelogger:
+    image: ghcr.io/hargata/lubelogger:v1.4.7
+    container_name: lubelogger
+    restart: unless-stopped
+    volumes:
+      - ./data:/App/data
+      - ./keys:/root/.aspnet/DataProtection-Keys
+    ports:
+      - 7965:8080
+    networks:
+      - npm
+    env_file:
+      - .env
+      - ../.env.shared
