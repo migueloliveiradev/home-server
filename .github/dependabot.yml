@@ -1,6 +1,12 @@
 version: 2
 updates:
   - package-ecosystem: "docker-compose"
-    directory: "/"
+    directories: 
+      - "/*"
     schedule:
       interval: "weekly"
+    open-pull-requests-limit: 20
+    commit-message:
+      prefix: "core:"
+    labels:
+      - dependencies
