@@ -1,7 +1,7 @@
 services:
   spotizerr:
     container_name: spotizerr
-    image: cooldockerizer93/spotizerr:2.0.0
+    image: cooldockerizer93/spotizerr:2.4.0
     volumes:
       - ./data:/app/data
       - ../library/music:/app/downloads
