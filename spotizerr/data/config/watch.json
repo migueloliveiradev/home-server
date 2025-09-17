@@ -1,7 +1,11 @@
 {
-  "enabled": true,
-  "watchedArtistAlbumGroup": [
-    "album"
-  ],
-  "watchPollIntervalSeconds": 86400
+    "enabled": true,
+    "watchedArtistAlbumGroup": [
+        "album",
+        "single"
+    ],
+    "watchPollIntervalSeconds": 86400,
+    "max_tracks_per_run": 50,
+    "delay_between_playlists_seconds": 2,
+    "delay_between_artists_seconds": 5
 }
