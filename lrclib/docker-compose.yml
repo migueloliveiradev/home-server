@@ -1,13 +1,13 @@
 services:
   lrclib-docker:
-    image: ghcr.io/migueloliveiradev/lrclib-docker:latest
+    image: ghcr.io/2t0m/lrclib-docker:0.0.4
     container_name: lrclib-docker
     volumes:
       - ../library/music:/app/music
     environment:
       USER_AGENT: "lrclib-docker v0.0.1"
-      RUN_ONCE: "True"
-      RUN_SCHEDULED: "False"
+      RUN_ONCE: "False"
+      RUN_SCHEDULED: "True"
       CRON_SCHEDULE: "0 * * * *"
       API_SLEEP_TIME: "20"
       FILE_LIMIT: "-1"
