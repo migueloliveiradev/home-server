@@ -5,7 +5,7 @@
     "deezerQuality": "MP3_128",
     "explicitFilter": false,
     "fallback": true,
-    "maxConcurrentDownloads": 2,
+    "maxConcurrentDownloads": 3,
     "maxRetries": 3,
     "realTime": true,
     "retryDelaySeconds": 5,
@@ -38,7 +38,7 @@
     "recursiveQuality": false,
     "spotifyMetadata": true,
     "separateTracksByUser": false,
-    "realTimeMultiplier": 0,
+    "realTimeMultiplier": 5,
     "padNumberWidth": 3,
     "sseUpdateIntervalSeconds": 1
 }
